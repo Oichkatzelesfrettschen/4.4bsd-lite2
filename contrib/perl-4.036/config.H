@@ -29,20 +29,14 @@
 /* LOC_SED
  *     This symbol holds the complete pathname to the sed program.
  */
-#define LOC_SED "/bin/sed"             /**/
-
-/* ALIGNBYTES
- *	This symbol contains the number of bytes required to align a double.
- *	Usual values are 2, 4, and 8.
- */
-#define ALIGNBYTES 8		/**/
+#define LOC_SED "/usr/bin/sed"             /**/
 
 /* BIN
  *	This symbol holds the name of the directory in which the user wants
  *	to keep publicly executable images for the package in question.  It
  *	is most often a local directory such as /usr/local/bin.
  */
-#define BIN "/usr/local/bin"             /**/
+#define BIN "/usr/contrib/bin"             /**/
 
 /* BYTEORDER
  *	This symbol contains an encoding of the order of bytes in a long.
@@ -61,7 +55,7 @@
  *	output.  This symbol will have the value "-" if CPPSTDIN needs a minus
  *	to specify standard input, otherwise the value is "".
  */
-#define CPPSTDIN "/usr/lib/cpp"
+#define CPPSTDIN "/usr/bin/cpp"
 #define CPPMINUS ""
 
 /* HAS_BCMP
@@ -112,7 +106,7 @@
  *	is up to the package author to declare sprintf correctly based on the
  *	symbol.
  */
-#define	CHARSPRINTF 	/**/
+/*#undef	CHARSPRINTF 	/**/
 
 /* HAS_CHSIZE
  *	This symbol, if defined, indicates that the chsize routine is available
@@ -194,7 +188,7 @@
  *	This symbol, if defined, indicates that the gethostent() routine is
  *	available to lookup host names in some data base or other.
  */
-#define	HAS_GETHOSTENT		/**/
+/*#undef	HAS_GETHOSTENT		/**/
 
 /* HAS_GETPGRP
  *	This symbol, if defined, indicates that the getpgrp() routine is
@@ -283,14 +277,14 @@
  *	roll your own.
  */
 #define	HAS_MEMCPY		/**/
-/*#undef	SAFE_MEMCPY		/**/
+#define	SAFE_MEMCPY		/**/
 
 /* HAS_MEMMOVE
  *	This symbol, if defined, indicates that the memmove routine is available
  *	to move potentially overlapping blocks of memory.  Otherwise you
  *	should use bcopy() or roll your own.
  */
-/*#undef	HAS_MEMMOVE		/**/
+#define	HAS_MEMMOVE		/**/
 
 /* HAS_MEMSET
  *	This symbol, if defined, indicates that the memset routine is available
@@ -309,31 +303,31 @@
  *	This symbol, if defined, indicates that the entire msg*(2) library is
  *	supported.
  */
-#define	HAS_MSG		/**/
+/*#undef	HAS_MSG		/**/
 
 /* HAS_MSGCTL
  *	This symbol, if defined, indicates that the msgctl() routine is
  *	available to control message passing.
  */
-#define	HAS_MSGCTL		/**/
+/*#undef	HAS_MSGCTL		/**/
 
 /* HAS_MSGGET
  *	This symbol, if defined, indicates that the msgget() routine is
  *	available to get messages.
  */
-#define	HAS_MSGGET		/**/
+/*#undef	HAS_MSGGET		/**/
 
 /* HAS_MSGRCV
  *	This symbol, if defined, indicates that the msgrcv() routine is
  *	available to receive messages.
  */
-#define	HAS_MSGRCV		/**/
+/*#undef	HAS_MSGRCV		/**/
 
 /* HAS_MSGSND
  *	This symbol, if defined, indicates that the msgsnd() routine is
  *	available to send messages.
  */
-#define	HAS_MSGSND		/**/
+/*#undef	HAS_MSGSND		/**/
 
 /* HAS_NDBM
  *	This symbol, if defined, indicates that ndbm.h exists and should
@@ -395,25 +389,25 @@
  *	This symbol, if defined, indicates that the entire sem*(2) library is
  *	supported.
  */
-#define	HAS_SEM		/**/
+/*#undef	HAS_SEM		/**/
 
 /* HAS_SEMCTL
  *	This symbol, if defined, indicates that the semctl() routine is
  *	available to control semaphores.
  */
-#define	HAS_SEMCTL		/**/
+/*#undef	HAS_SEMCTL		/**/
 
 /* HAS_SEMGET
  *	This symbol, if defined, indicates that the semget() routine is
  *	available to get semaphores ids.
  */
-#define	HAS_SEMGET		/**/
+/*#undef	HAS_SEMGET		/**/
 
 /* HAS_SEMOP
  *	This symbol, if defined, indicates that the semop() routine is
  *	available to perform semaphore operations.
  */
-#define	HAS_SEMOP		/**/
+/*#undef	HAS_SEMOP		/**/
 
 /* HAS_SETEGID
  *	This symbol, if defined, indicates that the setegid routine is available
@@ -485,7 +479,7 @@
  *	This symbol, if defined, indicates that the entire shm*(2) library is
  *	supported.
  */
-#define	HAS_SHM		/**/
+/*#undef	HAS_SHM		/**/
 
 /* HAS_SHMAT
  *	This symbol, if defined, indicates that the shmat() routine is
@@ -495,7 +489,7 @@
  *	This symbol, if defined, indicates that the shmat() routine
  *	returns a pointer of type void*.
  */
-#define	HAS_SHMAT		/**/
+/*#undef	HAS_SHMAT		/**/
 
 /*#undef	VOIDSHMAT		/**/
 
@@ -503,19 +497,19 @@
  *	This symbol, if defined, indicates that the shmctl() routine is
  *	available to control a shared memory segment.
  */
-#define	HAS_SHMCTL		/**/
+/*#undef	HAS_SHMCTL		/**/
 
 /* HAS_SHMDT
  *	This symbol, if defined, indicates that the shmdt() routine is
  *	available to detach a shared memory segment.
  */
-#define	HAS_SHMDT		/**/
+/*#undef	HAS_SHMDT		/**/
 
 /* HAS_SHMGET
  *	This symbol, if defined, indicates that the shmget() routine is
  *	available to get a shared memory segment id.
  */
-#define	HAS_SHMGET		/**/
+/*#undef	HAS_SHMGET		/**/
 
 /* HAS_SOCKET
  *	This symbol, if defined, indicates that the BSD socket interface is
@@ -545,7 +539,7 @@
  *	This symbol is defined if this system has a FILE structure declaring
  *	_ptr and _cnt in stdio.h.
  */
-#define	STDSTDIO 	/**/
+/*#undef	STDSTDIO 	/**/
 
 /* STRUCTCOPY
  *	This symbol, if defined, indicates that this C compiler knows how
@@ -558,7 +552,7 @@
  *	This symbol, if defined, indicates that the strerror() routine is
  *	available to translate error numbers to strings.
  */
-/*#undef	HAS_STRERROR		/**/
+#define	HAS_STRERROR		/**/
 
 /* HAS_SYMLINK
  *	This symbol, if defined, indicates that the symlink routine is available
@@ -608,7 +602,7 @@
  *	This symbol, if defined, indicates that this C compiler knows about
  *	the volatile declaration.
  */
-/*#undef	HASVOLATILE	/**/
+#define	HASVOLATILE	/**/
 
 /* HAS_VPRINTF
  *	This symbol, if defined, indicates that the vprintf routine is available
@@ -622,7 +616,7 @@
  *	symbol.
  */
 #define	HAS_VPRINTF	/**/
-#define	CHARVSPRINTF 	/**/
+/*#undef	CHARVSPRINTF 	/**/
 
 /* HAS_WAIT4
  *	This symbol, if defined, indicates that wait4() exists.
@@ -644,7 +638,7 @@
  *	This symbol has a value like gid_t, int, ushort, or whatever type is
  *	used in the return value of getgroups().
  */
-#define GROUPSTYPE int		/**/
+#define GROUPSTYPE gid_t		/**/
 
 /* I_FCNTL
  *	This manifest constant tells the C program to include <fcntl.h>.
@@ -704,11 +698,11 @@
  */
 #define	I_PWD		/**/
 /*#undef	PWQUOTA		/**/
-#define	PWAGE		/**/
-/*#undef	PWCHANGE	/**/
-/*#undef	PWCLASS		/**/
-/*#undef	PWEXPIRE	/**/
-#define	PWCOMMENT	/**/
+/*#undef	PWAGE		/**/
+#define	PWCHANGE	/**/
+#define	PWCLASS		/**/
+#define	PWEXPIRE	/**/
+/*#undef	PWCOMMENT	/**/
 
 /* I_SYS_FILE
  *	This manifest constant tells the C program to include <sys/file.h>.
@@ -755,7 +749,7 @@
  *	This symbol, if defined, indicates to the C program that it should
  *	include vfork.h.
  */
-#define	I_VFORK		/**/
+/*#undef	I_VFORK		/**/
 
 /* INTSIZE
  *	This symbol contains the size of an int, so that the C preprocessor
@@ -801,9 +795,9 @@
 /* MALLOCPTRTYPE
  *	This symbol defines the kind of ptr returned by malloc and realloc.
  */
-#define MYMALLOC			/**/
+/*#undef MYMALLOC			/**/
 
-#define MALLOCPTRTYPE char         /**/
+#define MALLOCPTRTYPE void         /**/
 
 
 /* RANDBITS
@@ -817,18 +811,18 @@
  *	to keep publicly executable scripts for the package in question.  It
  *	is often a directory that is mounted across diverse architectures.
  */
-#define SCRIPTDIR "/usr/local/bin"             /**/
+#define SCRIPTDIR "/usr/contrib/bin"             /**/
 
 /* SIG_NAME
  *	This symbol contains an list of signal names in order.
  */
-#define SIG_NAME "ZERO","HUP","INT","QUIT","ILL","TRAP","ABRT","EMT","FPE","KILL","BUS","SEGV","SYS","PIPE","ALRM","TERM","URG","STOP","TSTP","CONT","CLD","TTIN","TTOU","IO","XCPU","XFSZ","VTALRM","PROF","WINCH","LOST","USR1","USR2"		/**/
+#define SIG_NAME "ZERO","HUP","INT","QUIT","ILL","TRAP","ABRT","EMT","FPE","KILL","BUS","SEGV","SYS","PIPE","ALRM","TERM","URG","STOP","TSTP","CONT","CHLD","TTIN","TTOU","IO","XCPU","XFSZ","VTALRM","PROF","WINCH","INFO","USR1","USR2"		/**/
 
 /* STDCHAR
  *	This symbol is defined to be the type of char used in stdio.h.
  *	It has the values "unsigned char" or "char".
  */
-#define STDCHAR unsigned char	/**/
+#define STDCHAR char	/**/
 
 /* UIDTYPE
  *	This symbol has a value like uid_t, int, ushort, or whatever type is
@@ -887,6 +881,6 @@
  *	execution path, but it should be accessible by the world.  The program
  *	should be prepared to do ~ expansion.
  */
-#define PRIVLIB "/usr/local/lib/perl"		/**/
+#define PRIVLIB "/usr/contrib/lib/perl"		/**/
 
 #endif

@@ -25,10 +25,13 @@ SYSHDRS	      =
 all:		$(LIBRARY)
 
 $(LIBRARY):	$(OBJS)
+		@echo "Loading $(LIBRARY) ..."
+		@ar cru $(LIBRARY) $(OBJS)
+		@echo "done"
 
-clean:;		@rm -f core
+clean:;		@rm -f $(OBJS) core
 
-clobber:;	@rm -f $(LIBRARY) core tags
+clobber:;	@rm -f $(OBJS) $(LIBRARY) core tags
 
 depend:;	@mkmf -f $(MAKEFILE)
 

@@ -124,7 +124,72 @@ malloc.c: ../malloc.c
 	sed 's/"perl.h"/"..\/perl.h"/' ../malloc.c >malloc.c
 
 # AUTOMATICALLY GENERATED MAKE DEPENDENCIES--PUT NOTHING BELOW THIS LINE
-$(obj):
-	@echo "You haven't done a "'"make depend" yet!'; exit 1
-makedepend: makedepend.SH
-	/bin/sh $(shellflags) makedepend.SH
+# If this runs make out of memory, delete /usr/include lines.
+hash.o: 
+hash.o: ../config.h
+hash.o: /usr/include/ctype.h
+hash.o: /usr/include/machine/ansi.h
+hash.o: /usr/include/machine/endian.h
+hash.o: /usr/include/machine/types.h
+hash.o: /usr/include/stdio.h
+hash.o: /usr/include/sys/cdefs.h
+hash.o: /usr/include/sys/types.h
+hash.o: EXTERN.h
+hash.o: a2p.h
+hash.o: handy.h
+hash.o: hash.c
+hash.o: hash.h
+hash.o: str.h
+hash.o: util.h
+str.o: 
+str.o: ../config.h
+str.o: /usr/include/ctype.h
+str.o: /usr/include/machine/ansi.h
+str.o: /usr/include/machine/endian.h
+str.o: /usr/include/machine/types.h
+str.o: /usr/include/stdio.h
+str.o: /usr/include/sys/cdefs.h
+str.o: /usr/include/sys/types.h
+str.o: EXTERN.h
+str.o: a2p.h
+str.o: handy.h
+str.o: hash.h
+str.o: str.c
+str.o: str.h
+str.o: util.h
+util.o: 
+util.o: ../config.h
+util.o: /usr/include/ctype.h
+util.o: /usr/include/machine/ansi.h
+util.o: /usr/include/machine/endian.h
+util.o: /usr/include/machine/types.h
+util.o: /usr/include/stdio.h
+util.o: /usr/include/sys/cdefs.h
+util.o: /usr/include/sys/types.h
+util.o: EXTERN.h
+util.o: INTERN.h
+util.o: a2p.h
+util.o: handy.h
+util.o: hash.h
+util.o: str.h
+util.o: util.c
+util.o: util.h
+walk.o: 
+walk.o: ../config.h
+walk.o: /usr/include/ctype.h
+walk.o: /usr/include/machine/ansi.h
+walk.o: /usr/include/machine/endian.h
+walk.o: /usr/include/machine/types.h
+walk.o: /usr/include/stdio.h
+walk.o: /usr/include/sys/cdefs.h
+walk.o: /usr/include/sys/types.h
+walk.o: EXTERN.h
+walk.o: a2p.h
+walk.o: handy.h
+walk.o: hash.h
+walk.o: str.h
+walk.o: util.h
+walk.o: walk.c
+Makefile: Makefile.SH config.sh ; /bin/sh Makefile.SH
+makedepend: makedepend.SH config.sh ; /bin/sh makedepend.SH
+# WARNING: Put nothing here or make depend will gobble it up!
